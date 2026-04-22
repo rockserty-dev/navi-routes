@@ -314,7 +314,7 @@ async function findRoute(){
 
     const res=await fetch('https://api.openrouteservice.org/v2/directions/driving-car/geojson',{
       method:'POST',
-      headers:{'Authorization':ORS_KEY,'Content-Type':'application/json','Accept':'application/json'},
+      headers:{'Authorization':ORS_KEY,'Content-Type':'application/json','Accept':'application/geo+json, application/json'},
       body:JSON.stringify(body)
     });
     if(!res.ok){
